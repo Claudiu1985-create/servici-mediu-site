@@ -147,15 +147,39 @@ section {
     .section {
         padding: 25px 8px;
     }
-    .hero {
-        height: 180px;
-    }
-    .overlay h1 {
-        font-size: 2rem;
-    }
-    .overlay p {
-        font-size: 1rem;
-    }
+    /* Titlu + slogan centrate cu efect glass */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  display: inline-block;
+  padding: 20px 40px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-width: 900px;
+}
+
+.overlay h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.overlay p {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #f3f6f9;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+}    }
 }
 /* === Forțez eliminarea fundalurilor albe și aplic efect glass === */
 section,
