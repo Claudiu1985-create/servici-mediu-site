@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f9fa;
+    color: #243324;
+}
+.main-header {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 2px 8px rgba(77, 115, 77, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2e552e;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #57a957;
+}
+.hero {
+    position: relative;
+    height: 350px;
+    background: url('images/background.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay {
+    background: rgba(40,70,40,0.55);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+}
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+.overlay p {
+    font-size: 1.5rem;
+}
+.section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(77, 115, 77, 0.04);
+}
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-left: 0;
+}
+.services-list li {
+    background: #e9f5e1;
+    color: #2e552e;
+    padding: 12px 24px;
+    border-radius: 8px;
+    list-style: none;
+    font-size: 1.1rem;
+    flex: 1 1 200px;
+}
+.footer {
+    background: #2e552e;
+    color: #fff;
+    text-align: center;
+    padding: 24px 0 12px 0;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+@media (max-width: 700px) {
+    .main-header {
+        flex-direction: column;
+        padding: 12px 10px;
+    }
+    .section {
+        padding: 25px 8px;
+    }
+    .hero {
+        height: 180px;
+    }
+    .overlay h1 {
+        font-size: 2rem;
+    }
+    .overlay p {
+        font-size: 1rem;
+    }
+}
