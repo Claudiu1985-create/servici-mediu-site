@@ -88,15 +88,15 @@ nav a:hover {
 }
 .overlay {
     background: rgba(40,70,40,0.55);
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    padding: 60px 0;
-}
-.overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 16px;
-}
+    .services-list li {
+  background: #e9f5e1;
+  color: #2e552e;
+  padding: 12px 24px;
+  border-radius: 8px;
+  list-style: none;
+  font-size: 1rem;
+  flex: 1 1 200px;
+}}
 .overlay p {
     font-size: 1.5rem;
 }
