@@ -169,3 +169,15 @@ section {
     padding: 20px;
   }
 }
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff; /* alb */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* umbră */
+    transition: color 0.25s, text-shadow 0.25s;
+}
+
+nav a:hover {
+    color: #ffcc00; /* galben la hover */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
