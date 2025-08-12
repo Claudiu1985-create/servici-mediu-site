@@ -181,3 +181,38 @@ nav a:hover {
     color: #ffcc00; /* galben la hover */
     text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
 }
+/* === Elimin complet cutiile și blur-ul: titlu, secțiuni, carduri === */
+.overlay {
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+section, .section {
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.services-list li {
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+
+/* Text lizibil pe fundal */
+section h1, section h2, section p,
+.overlay h1, .overlay p,
+.services-list li {
+  color: #fff !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8) !important;
+}
