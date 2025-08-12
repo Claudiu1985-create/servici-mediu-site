@@ -36,9 +36,17 @@ body::before {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+    width: 180px; /* dimensiune mare și clară */
+    height: auto;
+    display: block;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4)); /* efect umbră */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.logo:hover {
+    transform: scale(1.05); /* mic efect de zoom la hover */
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.5));
+}}
 
 nav ul {
   list-style: none;
