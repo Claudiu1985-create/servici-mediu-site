@@ -74,27 +74,31 @@ nav a:hover {
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,.8);
 }
-.services-list li {
-  background: transparent;      /* fără alb/verde */
-  color: #fff;                  /* text alb */
-  padding: 12px 24px;
-  border-radius: 0;
-  list-style: none;
-  font-size: 1rem;
-  flex: 1 1 200px;
-  box-shadow: none;
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  background: rgba(255, 255, 255, 0.1); /* transparent cu tentă albă */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: #fff;
+  backdrop-filter: blur(8px); /* efect blur sticlă */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+}  box-shadow: none;
   border: 0;
 }}
 }
-.overlay {
-    background: rgba(40,70,40,0.55);
-    .services-list li {
-  background: #e9f5e1;
-  color: #2e552e;
-  padding: 12px 24px;
-  border-radius: 8px;
-  list-style: none;
-  font-size: 1rem;
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  background: rgba(255, 255, 255, 0.1); /* transparent cu tentă albă */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: #fff;
+  backdrop-filter: blur(8px); /* efect blur sticlă */
+  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
+}  font-size: 1rem;
   flex: 1 1 200px;
 }}}
 .overlay p {
