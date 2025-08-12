@@ -157,3 +157,28 @@ section {
         font-size: 1rem;
     }
 }
+/* === Forțez eliminarea fundalurilor albe și aplic efect glass === */
+section,
+.section,
+.card,
+.panel,
+.content,
+.box {
+  background: transparent !important;         /* scoate complet albul */
+  box-shadow: none !important;                /* scoate umbrele */
+  border: 0 !important;
+  border-radius: 12px !important;              /* colțuri rotunjite */
+  color: #fff !important;                      /* text alb */
+}
+
+/* Cardurile din lista de servicii cu efect de sticlă */
+.services-list li {
+  background: rgba(255,255,255,0.12) !important; /* transparență cu tentă albă */
+  color: #fff !important;
+  padding: 12px 24px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25) !important;
+  backdrop-filter: blur(8px) !important;        /* efect blur */
+  -webkit-backdrop-filter: blur(8px) !important;/* efect blur pentru Safari */
+  border: 0 !important;
+}
