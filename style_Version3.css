@@ -1,15 +1,14 @@
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  color: #fff; /* text alb implicit */
+  color: #fff;
   position: relative;
   background: url("./images/background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Overlay transparent peste tot site-ul */
+/* Overlay global peste toată pagina */
 body::before {
   content: "";
   position: fixed;
@@ -17,137 +16,50 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.35); /* poți crește dacă vrei mai întunecat */
+  background: rgba(0,0,0,0.35);
   z-index: -1;
-}}
+}
+
+/* Header */
 .main-header {
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 40px;
-    box-shadow: 0 2px 8px rgba(77, 115, 77, 0.06);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  box-shadow: 0 2px 8px rgba(77,115,77,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
 .logo {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
+
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 28px;
-    margin: 0;
-    padding: 0;
-}
-nav a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #2e552e;
-    transition: color 0.2s;
-}
-nav a:hover {
-    color: #57a957;
-}
-.hero {
-    position: relative;
-    .hero {
-  min-height: 60vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  background: none; /* folosim background-ul global din body */
-}
-
-.overlay {
-  display: inline-block;
-  padding: 16px 32px;
-  background: rgba(0,0,0,0.55);   /* bandă semi-transparentă sub text */
-  border-radius: 10px;
-}
-
-.overlay h1 {
-  margin: 0 0 10px;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,.8);
-}
-section {
-  padding: 50px 20px;
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  background: rgba(255, 255, 255, 0.1); /* transparent cu tentă albă */
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  color: #fff;
-  backdrop-filter: blur(8px); /* efect blur sticlă */
-  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
-}  box-shadow: none;
-  border: 0;
-}}
-}
-.services-list li {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px;
   list-style: none;
-  font-size: 1rem;
-  flex: 1 1 200px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}  backdrop-filter: blur(8px); /* efect blur sticlă */
-  -webkit-backdrop-filter: blur(8px); /* pentru Safari */
-}  font-size: 1rem;
-  flex: 1 1 200px;
-}}}
-.overlay p {
-    font-size: 1.5rem;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
-.section {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(77, 115, 77, 0.04);
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2e552e;
+  transition: color 0.25s;
 }
-.services-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    padding-left: 0;
+
+nav a:hover {
+  color: #57a957;
 }
-.services-list li {
-    background: #e9f5e1;
-    color: #2e552e;
-    padding: 12px 24px;
-    border-radius: 8px;
-    list-style: none;
-    font-size: 1.1rem;
-    flex: 1 1 200px;
-}
-.footer {
-    background: #2e552e;
-    color: #fff;
-    text-align: center;
-    padding: 24px 0 12px 0;
-    margin-top: 30px;
-    font-size: 1rem;
-}
-@media (max-width: 700px) {
-    .main-header {
-        flex-direction: column;
-        padding: 12px 10px;
-    }
-    .section {
-        padding: 25px 8px;
-    }
-    /* Titlu + slogan centrate cu efect glass */
+
+/* === Titlu + slogan centrate cu efect glass === */
 .hero {
   min-height: 60vh;
   display: flex;
@@ -179,30 +91,63 @@ section {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: #f3f6f9;
   text-shadow: 0 1px 6px rgba(0,0,0,0.8);
-}    }
-}
-/* === Forțez eliminarea fundalurilor albe și aplic efect glass === */
-section,
-.section,
-.card,
-.panel,
-.content,
-.box {
-  background: transparent !important;         /* scoate complet albul */
-  box-shadow: none !important;                /* scoate umbrele */
-  border: 0 !important;
-  border-radius: 12px !important;              /* colțuri rotunjite */
-  color: #fff !important;                      /* text alb */
 }
 
-/* Cardurile din lista de servicii cu efect de sticlă */
+/* === Secțiuni cu efect glass === */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* === Lista servicii cu efect glass === */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-left: 0;
+}
+
 .services-list li {
-  background: rgba(255,255,255,0.12) !important; /* transparență cu tentă albă */
-  color: #fff !important;
-  padding: 12px 24px !important;
-  border-radius: 10px !important;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.25) !important;
-  backdrop-filter: blur(8px) !important;        /* efect blur */
-  -webkit-backdrop-filter: blur(8px) !important;/* efect blur pentru Safari */
-  border: 0 !important;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  list-style: none;
+  font-size: 1rem;
+  flex: 1 1 200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Footer */
+.footer {
+  background: rgba(46,85,46,0.85);
+  color: #fff;
+  text-align: center;
+  padding: 24px 0 12px 0;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .main-header {
+    flex-direction: column;
+    padding: 12px 10px;
+  }
+  .section {
+    padding: 25px 8px;
+  }
+  .hero {
+    min-height: 50vh;
+    padding: 20px;
+  }
 }
