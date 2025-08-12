@@ -53,9 +53,33 @@ nav a:hover {
 }
 .hero {
     position: relative;
-    height: 350px;
-    background: url('images/background.jpg') center/cover no-repeat;
-    display: flex;
+    .hero {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: none; /* folosim background-ul global din body */
+}
+
+.overlay {
+  display: inline-block;
+  padding: 16px 32px;
+  background: rgba(0,0,0,0.55);   /* bandă semi-transparentă sub text */
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,.8);
+}
+
+.overlay p {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  color: #f3f6f9;
+}    display: flex;
     align-items: center;
     justify-content: center;
 }
