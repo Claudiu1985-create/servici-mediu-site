@@ -36,17 +36,17 @@ body::before {
 }
 
 .logo {
-    width: 180px; /* dimensiune mare și clară */
+    width: 200px; /* puțin mai mare decât înainte */
     height: auto;
     display: block;
-    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4)); /* efect umbră */
+    filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.9)); /* efect glow alb */
     transition: transform 0.3s ease, filter 0.3s ease;
-}
+}}
 
 .logo:hover {
-    transform: scale(1.05); /* mic efect de zoom la hover */
-    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.5));
-}}
+    transform: scale(1.08); /* mărire la hover */
+    filter: drop-shadow(0px 0px 15px rgba(255,255,255,1)); /* glow mai puternic */
+}}}
 
 nav ul {
   list-style: none;
