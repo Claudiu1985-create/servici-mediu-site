@@ -57,12 +57,18 @@ nav ul {
 }
 
 nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #2e552e;
-  transition: color 0.25s;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff !important; /* alb pur */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* umbră pentru contrast */
+    transition: all 0.3s ease-in-out; /* tranziție lină */
 }
 
+nav a:hover {
+    color: #ffff99 !important; /* galben pal la hover */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9); /* umbră mai intensă */
+    transform: scale(1.05); /* efect mic de mărire */
+}
 nav a:hover {
   color: #57a957;
 }
