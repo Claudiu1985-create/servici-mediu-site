@@ -88,15 +88,18 @@ section {
   border: 0;
 }}
 }
-section {
-  padding: 50px 20px;
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  background: rgba(255, 255, 255, 0.1); /* transparent cu tentă albă */
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+.services-list li {
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  backdrop-filter: blur(8px); /* efect blur sticlă */
+  padding: 12px 24px;
+  border-radius: 8px;
+  list-style: none;
+  font-size: 1rem;
+  flex: 1 1 200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}  backdrop-filter: blur(8px); /* efect blur sticlă */
   -webkit-backdrop-filter: blur(8px); /* pentru Safari */
 }  font-size: 1rem;
   flex: 1 1 200px;
