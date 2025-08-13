@@ -1,99 +1,125 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>Galerie cu lucrări</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .gallery-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .gallery-title {
-            text-align: center;
-            margin-bottom: 32px;
-            font-size: 2.5rem;
-            color: #2e552e;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-        }
-        .gallery-item {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 12px rgba(80,120,80,0.07);
-            display: flex;
-            flex-direction: column;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-        .gallery-caption {
-            padding: 16px;
-            font-size: 1.1rem;
-            color: #3b3b3b;
-        }
-        @media (max-width: 600px) {
-            .gallery-item img {
-                height: 140px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie lucrări — Clean and Plant 2004 S.R.L.</title>
+  <meta name="description" content="Galerie de lucrări: plantări, spații verzi, lucrări forestiere și proiecte ecologice." />
+  <link rel="stylesheet" href="style_Version3.css" />
 </head>
 <body>
-    <header class="main-header">
-        <img src="images/logo.png" class="logo" alt="Logo firma">
-        <nav>
-            <ul>
-                <li><a href="index.html#despre">Despre</a></li>
-                <li><a href="index.html#servicii">Servicii</a></li>
-                <li><a href="galerie.html">Galerie lucrări</a></li>
-                <li><a href="index.html#echipa">Echipa</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="gallery-container">
-        <h1 class="gallery-title">Galerie cu lucrări</h1>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/3.jpg" alt="Plantare puieți în pădure">
-                <div class="gallery-caption">Un grup de persoane lucrează împreună într-o pădure, săpând și pregătind pământul pentru plantarea de puieți, ca parte a unei acțiuni de reîmpădurire.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/4.jpg" alt="Echipă la lucru în pădure">
-                <div class="gallery-caption">O echipă de oameni se ocupă de plantarea și pregătirea terenului într-o zonă împădurită, realizând rânduri de gropi pentru puieți.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/5.jpg" alt="Plantare manuală pe teren verde">
-                <div class="gallery-caption">Mai multe persoane muncesc pe un teren deschis, săpând pământul și participând la plantarea de copaci într-o activitate de voluntariat pentru mediu.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/6.jpg" alt="Teren pregătit pentru plantări">
-                <div class="gallery-caption">Teren forestier proaspăt săpat, pregătit pentru plantare, cu rânduri paralele de gropi și un decor natural de pădure.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/7.jpg" alt="Curățenie spații verzi cu motocoasa">
-                <div class="gallery-caption">Un lucrător echipat cu salopetă și șapcă folosește o motocoasă pentru întreținerea spațiilor verzi, fiind înconjurat de vegetație și crengi tăiate.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/8.jpg" alt="Operare utilaj de întreținere spații verzi">
-                <div class="gallery-caption">O persoană poartă vestă reflectorizantă și este așezată la volanul unui utilaj specializat pentru întreținerea spațiilor verzi, într-un parc urban.</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/9.jpg" alt="Lucrări forestiere cu drujba">
-                <div class="gallery-caption">Un muncitor poartă echipament de protecție și folosește o drujbă pentru tăierea copacilor în pădure, fiind implicat într-o lucrare forestieră.</div>
-            </div>
-        </div>
+  <header class="main-header">
+    <a href="index.html" class="brand" aria-label="Acasă">
+      <img src="images/logo.png" class="logo" alt="Logo Clean and Plant 2004 S.R.L.">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html#despre">Despre</a></li>
+        <li><a href="index.html#servicii">Servicii</a></li>
+        <li><a href="galerie_Version4.html">Galerie lucrări</a></li>
+        <li><a href="index.html#echipa">Echipa</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2>Galerie lucrări</h2>
+    <p>Proiecte recente — click pe imagine pentru mărire.</p>
+
+    <div class="gallery-grid">
+      <a href="#img1" class="gallery-card"><img src="images/1.jpg" alt="Plantare puieți — reîmpădurire" loading="lazy"></a>
+      <a href="#img2" class="gallery-card"><img src="images/2.jpg" alt="Întreținere spații verzi — Laureniu" loading="lazy"></a>
+      <a href="#img3" class="gallery-card"><img src="images/3.jpg" alt="Lucrări forestiere — toaletare arbori" loading="lazy"></a>
+      <a href="#img4" class="gallery-card"><img src="images/4.jpg" alt="Curățenie industrială — hală" loading="lazy"></a>
+      <a href="#img5" class="gallery-card"><img src="images/5.jpg" alt="Amenajări peisagistice — aranjamente" loading="lazy"></a>
+      <a href="#img6" class="gallery-card"><img src="images/6.jpg" alt="Proiecte ecologice — campanie plantare" loading="lazy"></a>
+      <a href="#img7" class="gallery-card"><img src="images/7.jpg" alt="Îngrijirea parcurilor — întreținere alei" loading="lazy"></a>
+      <a href="#img8" class="gallery-card"><img src="images/8.jpg" alt="Tăiere controlată — arbori periculoși" loading="lazy"></a>
+      <a href="#img9" class="gallery-card"><img src="images/9.jpg" alt="Lucrări de sezon — pregătire iarnă" loading="lazy"></a>
     </div>
-    <footer class="footer">
-        &copy; 2025 Firma Exemplu. Toate drepturile rezervate.
-    </footer>
-</body>
-</html>
+  </section>
+
+  <!-- Lightbox + legende -->
+  <div class="lightbox" id="img1">
+    <a href="#" class="lb-close" aria-label="Închide"></a>
+    <figure class="lb-content">
+      <img src="images/1.jpg" alt="Plantare puieți — reîmpădurire">
+      <figcaption>
+        <h3>Plantare puieți</h3>
+        <p>Reîmpădurire pe 2 ha cu stejar pedunculat. Beneficiu: stabilizare sol, biodiversitate.</p>
+      </figcaption>
+    </figure>
+    <a class="lb-prev" href="#img9">‹</a><a class="lb-next" href="#img2">›</a>
+  </div>
+
+  <div class="lightbox" id="img2">
+    <a href="#" class="lb-close"></a>
+    <figure class="lb-content">
+      <img src="images/2.jpg" alt="Întreținere spații verzi — Laureniu">
+      <figcaption>
+        <h3>Întreținere spații verzi — Laureniu</h3>
+        <p>Tundere gard viu, cosit, colectare resturi vegetale. Beneficiu: spații curate și sigure.</p>
+      </figcaption>
+    </figure>
+    <a class="lb-prev" href="#img1">‹</a><a class="lb-next" href="#img3">›</a>
+  </div>
+
+  <div class="lightbox" id="img3">
+    <a href="#" class="lb-close"></a>
+    <figure class="lb-content">
+      <img src="images/3.jpg" alt="Lucrări forestiere — toaletare arbori">
+      <figcaption>
+        <h3>Lucrări forestiere</h3>
+        <p>Toaletare arbori maturi pentru siguranță. Beneficiu: risc redus de căderi.</p>
+      </figcaption>
+    </figure>
+    <a class="lb-prev" href="#img2">‹</a><a class="lb-next" href="#img4">›</a>
+  </div>
+
+  <div class="lightbox" id="img4">
+    <a href="#" class="lb-close"></a>
+    <figure class="lb-content">
+      <img src="images/4.jpg" alt="Curățenie industrială — hală">
+      <figcaption>
+        <h3>Curățenie industrială</h3>
+        <p>Curățare hale și spații de producție. Beneficiu: productivitate și siguranță crescute.</p>
+      </figcaption>
+    </figure>
+    <a class="lb-prev" href="#img3">‹</a><a class="lb-next" href="#img5">›</a>
+  </div>
+
+  <div class="lightbox" id="img5">
+    <a href="#" class="lb-close"></a>
+    <figure class="lb-content">
+      <img src="images/5.jpg" alt="Amenajări peisagistice — aranjamente">
+      <figcaption>
+        <h3>Amenajări peisagistice</h3>
+        <p>Aranjamente florale și structuri decorative. Beneficiu: imagine premium pentru spații.</p>
+      </figcaption>
+    </figure>
+    <a class="lb-prev" href="#img4">‹</a><a class="lb-next" href="#img6">›</a>
+  </div>
+
+  <div class="lightbox" id="img6">
+    <a href="#" class="lb-close"></a>
+    <figure class="lb-content">
+      <img src="images/6.jpg" alt="Proiecte ecologice — campanie plantare">
+      <figcaption>
+        <h3>Proiecte ecologice</h3>
+        <p>Campanii de plantare și educație de mediu. Beneficiu: CSR real și reputație mai bună.</p>
+      </figcaption>
+    </figure>
+    <a class="lb-prev" href="#img5">‹</a><a class="lb-next" href="#img7">›</a>
+  </div>
+
+  <div class="lightbox" id="img7">
+    <a href="#" class="lb-close"></a>
+    <figure class="lb-content">
+      <img src="images/7.jpg" alt="Îngrijirea parcurilor — întreținere alei">
+      <figcaption>
+        <h3>Îngrijirea parcurilor</h3>
+        <p>Curățare alei, colectare deșeuri, întreținere elemente decorative.</p>
+      </figcaption>
+    </figure>
+    <a class="
