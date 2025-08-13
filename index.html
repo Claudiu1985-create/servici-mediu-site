@@ -1,53 +1,85 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>Servicii de mediu - cleanandplant 2004 S.R.L</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style_Version3.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicii de mediu – Clean and Plant 2004 S.R.L.</title>
+
+  <!-- IMPORTANT: fișierul CSS trebuie să fie în rădăcina repo-ului, exact cu acest nume -->
+  <link rel="stylesheet" href="style_Version3.css" />
+  <meta name="description" content="Plantări, întreținere spații verzi, lucrări forestiere și proiecte ecologice. Cere o ofertă rapid de la Clean and Plant 2004 S.R.L." />
 </head>
 <body>
-    <header class="main-header">
-        <img src="images/logo.png" class="logo" alt="Logo firma">
-        <nav>
-            <ul>
-                <li><a href="#despre">Despre</a></li>
-                <li><a href="#servicii">Servicii</a></li>
-                <li><a href="galerie.html">Galerie lucrări</a></li>
-                <li><a href="#echipa">Echipa</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="overlay">
-            <h1>Clean and Plant 2004 S.R.L</h1>
-            <p>Împreună pentru un mediu mai curat și sănătos</p>
-        </div>
-    </section>
-    <section id="despre" class="section">
-        <h2>Despre noi</h2>
-        <p>Suntem o echipă dedicată protecției mediului, specializați în plantări, întreținere spații verzi, lucrări forestiere și proiecte ecologice.</p>
-    </section>
-    <section id="servicii" class="section">
-        <h2>Serviciile noastre</h2>
-        <ul class="services-list">
-            <li>Plantare și reîmpădurire</li>
-            <li>Întreținere și curățenie spații verzi</li>
-            <li>Lucrări forestiere</li>
-            <li>Consultanță ecologică</li>
-        </ul>
-    </section>
-    <section id="echipa" class="section">
-        <h2>Echipa noastră</h2>
-        <p>Echipa noastră este formată din specialiști cu experiență în domeniul mediului și voluntari pasionați.</p>
-    </section>
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email:cleanplantsrl@gmail.com>Telefon: +491724867610</p>
-    </section>
-    <footer class="footer">
-        &copy; 2025 Clean and Plant 2004 S.R.L. Toate drepturile rezervate.
-    </footer>
+
+  <!-- Header -->
+  <header class="main-header">
+    <a href="index.html" class="brand" aria-label="Acasă">
+      <img src="images/logo.png" class="logo" alt="Logo Clean and Plant 2004 S.R.L.">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="galerie_Version4.html">Galerie lucrări</a></li>
+        <li><a href="#echipa">Echipa</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Clean and Plant 2004 S.R.L</h1>
+      <p>Împreună pentru un mediu mai curat și sănătos</p>
+    </div>
+  </section>
+
+  <!-- Despre -->
+  <section id="despre" class="section">
+    <h2>Despre noi</h2>
+    <p>Suntem o echipă dedicată protecției mediului, specializați în plantări, întreținere spații verzi, lucrări forestiere și proiecte ecologice.</p>
+  </section>
+
+  <!-- Servicii -->
+  <section id="servicii" class="section">
+    <h2>Serviciile noastre</h2>
+    <ul class="services-list">
+      <li>Plantare și reîmpădurire</li>
+      <li>Întreținere și curățenie spații verzi</li>
+      <li>Lucrări forestiere</li>
+      <li>Consultanță ecologică</li>
+    </ul>
+  </section>
+
+  <!-- Echipa -->
+  <section id="echipa" class="section">
+    <h2>Echipa noastră</h2>
+    <p>Echipa noastră este formată din specialiști cu expertiză în domeniul mediului și voluntari pasionați.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:cleanplant2004@gmail.com">cleanplant2004@gmail.com</a><br>
+      Telefon: <a href="tel:+40700000000">+40 700 000 000</a>
+    </p>
+  </section>
+
+  <footer class="footer">
+    © 2025 Clean and Plant 2004 S.R.L. — Toate drepturile rezervate.
+  </footer>
+
+  <!-- opțional: scroll lin -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
 </body>
 </html>
