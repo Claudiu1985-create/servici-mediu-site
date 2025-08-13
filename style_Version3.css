@@ -126,3 +126,62 @@ nav a:hover {
 
 /* ===== Galerie (grid + lightbox) — folosită de galerie_Version4.html ===== */
 .gallery-grid {
+.contact-section {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-item:nth-child(2) {
+  background: #0072c6; /* Email */
+}
+
+.contact-item:nth-child(3) {
+  background: #128C7E; /* WhatsApp */
+}
+
+.contact-item:hover {
+  opacity: 0.85;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form .btn-primary {
+  background: #0072c6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form .btn-primary:hover {
+  background: #005a99;
+}
