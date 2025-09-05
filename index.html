@@ -79,15 +79,51 @@
   <!-- Servicii/Services/Dienstleistungen -->
   <section id="servicii" class="section lang-section lang-ro">
     <h2>Serviciile noastre</h2>
-    <ul id="servicii-list-ro" class="services-list"></ul>
+    <ul class="services-list">
+      <li>1. Plantare și reîmpădurire</li>
+      <li>2. Întreținere și curățenie spații verzi</li>
+      <li>3. Lucrări forestiere</li>
+      <li>4. Consultanță ecologică</li>
+      <li>5. Curățenie generală interioară și exterioară</li>
+      <li>6. Defrișare terenuri</li>
+      <li>7. Îndepărtare deșeuri vegetale</li>
+      <li>8. Grădinărit profesional</li>
+      <li>9. Montaj sisteme de irigare</li>
+      <li>10. Întreținere arbori ornamentali</li>
+      <!-- STOP aici, nu mai adăuga servicii generice -->
+    </ul>
   </section>
   <section id="services" class="section lang-section lang-en hidden">
     <h2>Our services</h2>
-    <ul id="servicii-list-en" class="services-list"></ul>
+    <ul class="services-list">
+      <li>1. Tree planting and afforestation</li>
+      <li>2. Green space maintenance and cleaning</li>
+      <li>3. Forestry work</li>
+      <li>4. Ecological consulting</li>
+      <li>5. General indoor and outdoor cleaning</li>
+      <li>6. Land clearing</li>
+      <li>7. Removal of vegetal waste</li>
+      <li>8. Professional gardening</li>
+      <li>9. Installation of irrigation systems</li>
+      <li>10. Ornamental tree maintenance</li>
+      <!-- STOP aici, nu mai adăuga servicii generice -->
+    </ul>
   </section>
   <section id="dienstleistungen" class="section lang-section lang-de hidden">
     <h2>Unsere Dienstleistungen</h2>
-    <ul id="servicii-list-de" class="services-list"></ul>
+    <ul class="services-list">
+      <li>1. Baumpflanzung und Aufforstung</li>
+      <li>2. Pflege und Reinigung von Grünflächen</li>
+      <li>3. Forstarbeiten</li>
+      <li>4. Ökologische Beratung</li>
+      <li>5. Allgemeine Innen- und Außenreinigung</li>
+      <li>6. Gelände Rodung</li>
+      <li>7. Entfernung von Pflanzenabfällen</li>
+      <li>8. Professionelle Gartenarbeit</li>
+      <li>9. Installation von Bewässerungssystemen</li>
+      <li>10. Pflege von Zierbäumen</li>
+      <!-- STOP aici, nu mai adăuga servicii generice -->
+    </ul>
   </section>
 
   <!-- Echipa/Team -->
@@ -227,65 +263,6 @@
   </footer>
 
   <script>
-    // Generare automată servicii traduse
-    const serviciiRO = [];
-    const serviciiEN = [];
-    const serviciiDE = [];
-    for(let i=1;i<=191;i++) {
-      serviciiRO.push(`${i}. Serviciu ${i}`);
-      serviciiEN.push(`${i}. Service ${i}`);
-      serviciiDE.push(`${i}. Dienstleistung ${i}`);
-    }
-    // Exemplu: primele 10 rânduri complet traduse
-    serviciiRO[0] = "1. Plantare și reîmpădurire";
-    serviciiRO[1] = "2. Întreținere și curățenie spații verzi";
-    serviciiRO[2] = "3. Lucrări forestiere";
-    serviciiRO[3] = "4. Consultanță ecologică";
-    serviciiRO[4] = "5. Curățenie generală interioară și exterioară";
-    serviciiRO[5] = "6. Defrișare terenuri";
-    serviciiRO[6] = "7. Îndepărtare deșeuri vegetale";
-    serviciiRO[7] = "8. Grădinărit profesional";
-    serviciiRO[8] = "9. Montaj sisteme de irigare";
-    serviciiRO[9] = "10. Întreținere arbori ornamentali";
-    serviciiEN[0] = "1. Tree planting and afforestation";
-    serviciiEN[1] = "2. Green space maintenance and cleaning";
-    serviciiEN[2] = "3. Forestry work";
-    serviciiEN[3] = "4. Ecological consulting";
-    serviciiEN[4] = "5. General indoor and outdoor cleaning";
-    serviciiEN[5] = "6. Land clearing";
-    serviciiEN[6] = "7. Removal of vegetal waste";
-    serviciiEN[7] = "8. Professional gardening";
-    serviciiEN[8] = "9. Installation of irrigation systems";
-    serviciiEN[9] = "10. Ornamental tree maintenance";
-    serviciiDE[0] = "1. Baumpflanzung und Aufforstung";
-    serviciiDE[1] = "2. Pflege und Reinigung von Grünflächen";
-    serviciiDE[2] = "3. Forstarbeiten";
-    serviciiDE[3] = "4. Ökologische Beratung";
-    serviciiDE[4] = "5. Allgemeine Innen- und Außenreinigung";
-    serviciiDE[5] = "6. Gelände Rodung";
-    serviciiDE[6] = "7. Entfernung von Pflanzenabfällen";
-    serviciiDE[7] = "8. Professionelle Gartenarbeit";
-    serviciiDE[8] = "9. Installation von Bewässerungssystemen";
-    serviciiDE[9] = "10. Pflege von Zierbäumen";
-
-    function renderList(id, arr) {
-      const el=document.getElementById(id); el.innerHTML=''; arr.forEach(item=>{
-        const li=document.createElement('li'); li.textContent=item; el.appendChild(li);
-      });
-    }
-    window.onload = function() {
-      renderList('servicii-list-ro', serviciiRO);
-      renderList('servicii-list-en', serviciiEN);
-      renderList('servicii-list-de', serviciiDE);
-      // Limba implicită
-      const savedLang = localStorage.getItem('lang');
-      if(savedLang && ['ro','en','de'].includes(savedLang)) {
-        setLang(savedLang);
-      } else {
-        const browserLang = navigator.language.slice(0,2);
-        setLang(['ro','en','de'].includes(browserLang) ? browserLang : 'ro');
-      }
-    }
     // Language switching logic
     const langBtns = document.querySelectorAll('.lang-btn');
     const langSections = document.querySelectorAll('.lang-section');
@@ -321,6 +298,15 @@
       setLang(btn.dataset.lang);
       localStorage.setItem('lang', btn.dataset.lang);
     }));
+    window.onload = function() {
+      const savedLang = localStorage.getItem('lang');
+      if(savedLang && ['ro','en','de'].includes(savedLang)) {
+        setLang(savedLang);
+      } else {
+        const browserLang = navigator.language.slice(0,2);
+        setLang(['ro','en','de'].includes(browserLang) ? browserLang : 'ro');
+      }
+    }
   </script>
 </body>
 </html>
