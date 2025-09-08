@@ -3,37 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cerere de ofertă — Clean and Plant 2004 S.R.L.</title>
-  <meta name="description" content="Trimite o cerere de ofertă profesională pentru servicii de mediu, spații verzi, lucrări forestiere sau curățenie. Calculul se face ulterior, în privat.">
+  <title>Servicii de mediu – Clean and Plant 2004 S.R.L.</title>
+  <meta name="description" content="Servicii de mediu, plantări, întreținere spații verzi, lucrări forestiere, proiecte ecologice." />
   <link rel="stylesheet" href="style_Version3.css" />
+  <style>
+    .lang-menu {
+      display: flex; gap: 12px; position: absolute; right: 24px; top: 14px; z-index: 10;
+    }
+    .lang-btn { color: #fff; font-weight: bold; background: rgba(0,0,0,0.25); padding: 5px 13px; border-radius: 5px; border: none; cursor: pointer; transition: background 0.2s;}
+    .lang-btn.active, .lang-btn:hover { background: #0072c6; }
+    .hidden { display: none !important; }
+    ul.services-list { columns: 2; }
+    @media (max-width: 700px) { ul.services-list { columns: 1; } }
+  </style>
 </head>
 <body>
   <header class="main-header">
-    <a href="index.html" class="brand">
+    <a href="#" class="brand" aria-label="Acasă">
       <img src="images/logo.png" class="logo" alt="Logo Clean and Plant 2004 S.R.L.">
     </a>
     <nav>
-      <!-- meniurile multilingve -->
       <ul id="menu-ro">
-        <li><a href="index.html#despre">Despre</a></li>
-        <li><a href="index.html#servicii">Servicii</a></li>
-        <li><a href="galerie_Version4.html">Galerie lucrări</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="oferta.html" aria-current="page">Cerere ofertă</a></li>
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="#galerie">Galerie lucrări</a></li>
+        <li><a href="#echipa">Echipa</a></li>
+        <li><a href="#contact">Contact / Cerere ofertă</a></li>
       </ul>
       <ul id="menu-en" class="hidden">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="galerie_Version4.html">Works Gallery</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="oferta.html" aria-current="page">Quote request</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Works Gallery</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact / Quote Request</a></li>
       </ul>
       <ul id="menu-de" class="hidden">
-        <li><a href="index.html#uberuns">Über Uns</a></li>
-        <li><a href="index.html#dienstleistungen">Dienstleistungen</a></li>
-        <li><a href="galerie_Version4.html">Galerie Arbeiten</a></li>
-        <li><a href="index.html#kontakt">Kontakt</a></li>
-        <li><a href="oferta.html" aria-current="page">Angebotsanfrage</a></li>
+        <li><a href="#uberuns">Über Uns</a></li>
+        <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+        <li><a href="#galerie">Galerie Arbeiten</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#kontakt">Kontakt / Angebotsanfrage</a></li>
       </ul>
     </nav>
     <div class="lang-menu">
@@ -43,172 +52,261 @@
     </div>
   </header>
 
-  <section class="section quote-section">
-    <div class="quote-card">
-      <!-- ROMÂNĂ -->
-      <div class="lang-section lang-ro">
-        <h1>Cerere de ofertă</h1>
-        <p>Completează detaliile proiectului tău. <strong>Calculul se face ulterior, în privat</strong>.</p>
-        <form name="Cerere Oferta Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" id="quote-form-ro">
-          <input type="hidden" name="form-name" value="Cerere Oferta Clean&Plant">
-          <p class="hidden"><label>Nu completați: <input name="camp_p"></label></p>
-
-          <label>Tip proiect
-            <select name="Tip proiect" required>
-              <option disabled selected>Alege...</option>
-              <option>Plantare / Reîmpădurire</option>
-              <option>Întreținere spații verzi</option>
-              <option>Lucrări forestiere</option>
-              <option>Curățenie generală</option>
-              <option>Defrișare teren</option>
-              <option>Consultanță ecologică</option>
-              <option>Alt tip</option>
-            </select>
-          </label>
-
-          <label>Descriere proiect
-            <textarea name="Descriere proiect" required></textarea>
-          </label>
-
-          <label>Localitate
-            <input type="text" name="Localitate" required>
-          </label>
-
-          <label>Nume și prenume
-            <input type="text" name="Nume" required>
-          </label>
-
-          <label>Telefon
-            <input type="tel" name="Telefon" required>
-          </label>
-
-          <label>Email
-            <input type="email" name="Email" required>
-          </label>
-
-          <label><input type="checkbox" name="GDPR" required> Sunt de acord cu prelucrarea datelor</label>
-
-          <button type="submit" class="btn-primary">Trimite cererea</button>
-          <p id="status-ro"></p>
-        </form>
-      </div>
-
-      <!-- ENGLISH -->
-      <div class="lang-section lang-en hidden">
-        <h1>Quote request</h1>
-        <p>Fill in your project details. <strong>The calculation will be sent privately afterwards</strong>.</p>
-        <form name="Quote Request Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="honeypot" id="quote-form-en">
-          <input type="hidden" name="form-name" value="Quote Request Clean&Plant">
-          <p class="hidden"><label>Do not fill: <input name="honeypot"></label></p>
-
-          <label>Project type
-            <select name="Project type" required>
-              <option disabled selected>Select...</option>
-              <option>Tree planting</option>
-              <option>Green space maintenance</option>
-              <option>Forestry work</option>
-              <option>General cleaning</option>
-              <option>Land clearing</option>
-              <option>Ecological consulting</option>
-              <option>Other</option>
-            </select>
-          </label>
-
-          <label>Project description
-            <textarea name="Project description" required></textarea>
-          </label>
-
-          <label>City
-            <input type="text" name="City" required>
-          </label>
-
-          <label>Name
-            <input type="text" name="Name" required>
-          </label>
-
-          <label>Phone
-            <input type="tel" name="Phone" required>
-          </label>
-
-          <label>Email
-            <input type="email" name="Email" required>
-          </label>
-
-          <label><input type="checkbox" name="GDPR" required> I agree to data processing</label>
-
-          <button type="submit" class="btn-primary">Send request</button>
-          <p id="status-en"></p>
-        </form>
-      </div>
-
-      <!-- DEUTSCH -->
-      <div class="lang-section lang-de hidden">
-        <h1>Angebotsanfrage</h1>
-        <p>Füllen Sie die Projektdetails aus. <strong>Die Kalkulation senden wir Ihnen privat</strong>.</p>
-        <form name="Angebotsanfrage Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="falle" id="quote-form-de">
-          <input type="hidden" name="form-name" value="Angebotsanfrage Clean&Plant">
-          <p class="hidden"><label>Bitte nicht ausfüllen: <input name="falle"></label></p>
-
-          <label>Projekttyp
-            <select name="Projekttyp" required>
-              <option disabled selected>Auswählen...</option>
-              <option>Baumpflanzung</option>
-              <option>Pflege von Grünflächen</option>
-              <option>Forstarbeiten</option>
-              <option>Allgemeine Reinigung</option>
-              <option>Geländerodung</option>
-              <option>Ökologische Beratung</option>
-              <option>Sonstiges</option>
-            </select>
-          </label>
-
-          <label>Projektbeschreibung
-            <textarea name="Projektbeschreibung" required></textarea>
-          </label>
-
-          <label>Ort
-            <input type="text" name="Ort" required>
-          </label>
-
-          <label>Name
-            <input type="text" name="Name" required>
-          </label>
-
-          <label>Telefon
-            <input type="tel" name="Telefon" required>
-          </label>
-
-          <label>E-Mail
-            <input type="email" name="Email" required>
-          </label>
-
-          <label><input type="checkbox" name="GDPR" required> Ich stimme der Datenverarbeitung zu</label>
-
-          <button type="submit" class="btn-primary">Anfrage senden</button>
-          <p id="status-de"></p>
-        </form>
-      </div>
+  <section class="hero">
+    <div class="overlay">
+      <h1 id="hero-ro">Clean and Plant 2004 S.R.L</h1>
+      <h1 id="hero-en" class="hidden">Clean and Plant 2004 S.R.L</h1>
+      <h1 id="hero-de" class="hidden">Clean and Plant 2004 S.R.L</h1>
+      <p id="herotext-ro">Împreună pentru un mediu mai curat și sănătos</p>
+      <p id="herotext-en" class="hidden">Together for a cleaner and healthier environment</p>
+      <p id="herotext-de" class="hidden">Gemeinsam für eine sauberere und gesündere Umwelt</p>
     </div>
   </section>
 
+  <section id="despre" class="section lang-section lang-ro">
+    <h2>Despre noi</h2>
+    <p>Suntem o echipă dedicată protecției mediului, specializați în plantări, întreținere spații verzi, lucrări forestiere, proiecte ecologice și curățenii generale.</p>
+  </section>
+  <section id="about" class="section lang-section lang-en hidden">
+    <h2>About us</h2>
+    <p>We are a team dedicated to environmental protection, specializing in tree planting, green space maintenance, forestry work, ecological projects and general cleaning.</p>
+  </section>
+  <section id="uberuns" class="section lang-section lang-de hidden">
+    <h2>Über Uns</h2>
+    <p>Wir sind ein engagiertes Team für Umweltschutz, spezialisiert auf Baumpflanzungen, Pflege von Grünflächen, Forstarbeiten, ökologische Projekte und allgemeine Reinigungsdienste.</p>
+  </section>
+
+  <!-- Servicii/Services/Dienstleistungen -->
+  <section id="servicii" class="section lang-section lang-ro">
+    <h2>Serviciile noastre</h2>
+    <ul class="services-list">
+      <li>1. Plantare și reîmpădurire</li>
+      <li>2. Întreținere și curățenie spații verzi</li>
+      <li>3. Lucrări forestiere</li>
+      <li>4. Consultanță ecologică</li>
+      <li>5. Curățenie generală interioară și exterioară</li>
+      <li>6. Defrișare terenuri</li>
+      <li>7. Îndepărtare deșeuri vegetale</li>
+      <li>8. Grădinărit profesional</li>
+      <li>9. Montaj sisteme de irigare</li>
+      <li>10. Întreținere arbori ornamentali</li>
+      <!-- STOP aici, nu mai adăuga servicii generice -->
+    </ul>
+  </section>
+  <section id="services" class="section lang-section lang-en hidden">
+    <h2>Our services</h2>
+    <ul class="services-list">
+      <li>1. Tree planting and afforestation</li>
+      <li>2. Green space maintenance and cleaning</li>
+      <li>3. Forestry work</li>
+      <li>4. Ecological consulting</li>
+      <li>5. General indoor and outdoor cleaning</li>
+      <li>6. Land clearing</li>
+      <li>7. Removal of vegetal waste</li>
+      <li>8. Professional gardening</li>
+      <li>9. Installation of irrigation systems</li>
+      <li>10. Ornamental tree maintenance</li>
+      <!-- STOP aici, nu mai adăuga servicii generice -->
+    </ul>
+  </section>
+  <section id="dienstleistungen" class="section lang-section lang-de hidden">
+    <h2>Unsere Dienstleistungen</h2>
+    <ul class="services-list">
+      <li>1. Baumpflanzung und Aufforstung</li>
+      <li>2. Pflege und Reinigung von Grünflächen</li>
+      <li>3. Forstarbeiten</li>
+      <li>4. Ökologische Beratung</li>
+      <li>5. Allgemeine Innen- und Außenreinigung</li>
+      <li>6. Gelände Rodung</li>
+      <li>7. Entfernung von Pflanzenabfällen</li>
+      <li>8. Professionelle Gartenarbeit</li>
+      <li>9. Installation von Bewässerungssystemen</li>
+      <li>10. Pflege von Zierbäumen</li>
+      <!-- STOP aici, nu mai adăuga servicii generice -->
+    </ul>
+  </section>
+
+  <!-- Echipa/Team -->
+  <section id="echipa" class="section lang-section lang-ro">
+    <h2>Echipa noastră</h2>
+    <p>Avem o echipă de profesioniști cu experiență în domeniul mediului, pregătiți să vă ofere soluții eficiente și personalizate pentru fiecare proiect.</p>
+  </section>
+  <section id="team" class="section lang-section lang-en hidden">
+    <h2>Our team</h2>
+    <p>We have a team of professionals experienced in the environmental field, ready to provide you with effective and personalized solutions for every project.</p>
+  </section>
+  <section id="team" class="section lang-section lang-de hidden">
+    <h2>Unser Team</h2>
+    <p>Wir verfügen über ein erfahrenes Team von Fachleuten im Umweltbereich, das Ihnen effektive und individuelle Lösungen für jedes Projekt bietet.</p>
+  </section>
+
+  <!-- Contact/Cerere/Angebot -->
+  <section id="contact" class="section contact-section lang-section lang-ro">
+    <h2>Cerere de Ofertă</h2>
+    <p>
+      Suntem dedicați să oferim soluții personalizate și eficiente pentru fiecare client, indiferent de complexitatea proiectului. Indiferent dacă aveți nevoie de servicii de curățenie, ecologizare, plantări sau consultanță în domeniul mediului, echipa noastră vă stă la dispoziție cu promptitudine și profesionalism.<br><br>
+      Vă invităm să ne transmiteți detaliile proiectului dumneavoastră completând formularul de cerere de ofertă. În cel mai scurt timp, unul dintre specialiștii noștri vă va contacta pentru a vă oferi o soluție adaptată nevoilor dumneavoastră și o estimare corectă a costurilor.
+    </p>
+    <div class="contact-info">
+      <a href="tel:+491724867610" class="contact-item" target="_blank">📞 +49 172 486 7610</a>
+      <a href="mailto:cleanplant2004@gmail.com" class="contact-item" target="_blank">📧 cleanplant2004@gmail.com</a>
+      <a href="https://wa.me/491724867610" class="contact-item" target="_blank">💬 WhatsApp Chat Direct</a>
+    </div>
+    <form name="Contact Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" action="/multumim.html" class="contact-form">
+      <input type="hidden" name="form-name" value="Contact Clean&Plant">
+      <p class="hidden"><label>Nu completați: <input name="camp_p"></label></p>
+      <div class="form-row">
+        <label for="nume">Nume și prenume</label>
+        <input id="nume" name="Nume" type="text" placeholder="Ex: Popescu Ioan" required>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="telefon">Telefon</label>
+          <input id="telefon" name="Telefon" type="tel" placeholder="+40 ..." required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="Email" type="email" placeholder="exemplu@email.ro" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="mesaj">Mesaj</label>
+        <textarea id="mesaj" name="Mesaj" rows="5" placeholder="Descrie pe scurt lucrarea dorită" required></textarea>
+      </div>
+      <div class="form-row chk">
+        <label><input type="checkbox" name="GDPR" required> Sunt de acord cu prelucrarea datelor pentru a fi contactat.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Trimite cererea</button>
+    </form>
+  </section>
+  <section id="contact" class="section contact-section lang-section lang-en hidden">
+    <h2>Request a Quote</h2>
+    <p>
+      We are committed to providing personalized and efficient solutions for every client, regardless of project complexity. Whether you need cleaning, ecological services, planting or environmental consultancy, our team is ready to help promptly and professionally.<br><br>
+      Please send us the details of your project by filling out the quote request form. As soon as possible, one of our specialists will contact you to offer a solution adapted to your needs and a fair cost estimate.
+    </p>
+    <div class="contact-info">
+      <a href="tel:+491724867610" class="contact-item" target="_blank">📞 +49 172 486 7610</a>
+      <a href="mailto:cleanplant2004@gmail.com" class="contact-item" target="_blank">📧 cleanplant2004@gmail.com</a>
+      <a href="https://wa.me/491724867610" class="contact-item" target="_blank">💬 WhatsApp Chat Direct</a>
+    </div>
+    <form name="Contact Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" action="/thanks.html" class="contact-form">
+      <input type="hidden" name="form-name" value="Contact Clean&Plant">
+      <p class="hidden"><label>Do not fill: <input name="camp_p"></label></p>
+      <div class="form-row">
+        <label for="name">Name and surname</label>
+        <input id="name" name="Name" type="text" placeholder="Ex: John Smith" required>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="Phone" type="tel" placeholder="+40 ..." required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="Email" type="email" placeholder="example@email.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" rows="5" placeholder="Briefly describe the desired work" required></textarea>
+      </div>
+      <div class="form-row chk">
+        <label><input type="checkbox" name="GDPR" required> I agree to the processing of my data to be contacted.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Send request</button>
+    </form>
+  </section>
+  <section id="kontakt" class="section contact-section lang-section lang-de hidden">
+    <h2>Angebotsanfrage</h2>
+    <p>
+      Wir setzen uns dafür ein, jedem Kunden individuelle und effiziente Lösungen zu bieten, unabhängig von der Komplexität des Projekts. Egal, ob Sie Reinigungsdienste, ökologische Dienstleistungen, Pflanzungen oder Umweltberatung benötigen, unser Team steht Ihnen schnell und professionell zur Verfügung.<br><br>
+      Bitte senden Sie uns die Details Ihres Projekts, indem Sie das Angebotsformular ausfüllen. Einer unserer Spezialisten wird Sie so schnell wie möglich kontaktieren, um Ihnen eine passende Lösung und eine faire Kostenschätzung vorzuschlagen.
+    </p>
+    <div class="contact-info">
+      <a href="tel:+491724867610" class="contact-item" target="_blank">📞 +49 172 486 7610</a>
+      <a href="mailto:cleanplant2004@gmail.com" class="contact-item" target="_blank">📧 cleanplant2004@gmail.com</a>
+      <a href="https://wa.me/491724867610" class="contact-item" target="_blank">💬 WhatsApp Chat Direkt</a>
+    </div>
+    <form name="Contact Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" action="/danke.html" class="contact-form">
+      <input type="hidden" name="form-name" value="Contact Clean&Plant">
+      <p class="hidden"><label>Bitte nicht ausfüllen: <input name="camp_p"></label></p>
+      <div class="form-row">
+        <label for="name">Name und Nachname</label>
+        <input id="name" name="Name" type="text" placeholder="z.B. Max Mustermann" required>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="telefon">Telefon</label>
+          <input id="telefon" name="Telefon" type="tel" placeholder="+40 ..." required>
+        </div>
+        <div>
+          <label for="email">E-Mail</label>
+          <input id="email" name="Email" type="email" placeholder="beispiel@email.de" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="nachricht">Nachricht</label>
+        <textarea id="nachricht" name="Nachricht" rows="5" placeholder="Beschreiben Sie kurz die gewünschte Arbeit" required></textarea>
+      </div>
+      <div class="form-row chk">
+        <label><input type="checkbox" name="GDPR" required> Ich bin mit der Verarbeitung meiner Daten zwecks Kontaktaufnahme einverstanden.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Anfrage senden</button>
+    </form>
+  </section>
+
   <footer class="footer">
-    <span>&copy; 2024 Clean and Plant 2004 S.R.L. | Toate drepturile rezervate</span>
+    <span id="footer-ro">&copy; 2024 Clean and Plant 2004 S.R.L. | Toate drepturile rezervate</span>
+    <span id="footer-en" class="hidden">&copy; 2024 Clean and Plant 2004 S.R.L. | All rights reserved</span>
+    <span id="footer-de" class="hidden">&copy; 2024 Clean and Plant 2004 S.R.L. | Alle Rechte vorbehalten</span>
   </footer>
 
   <script>
-    // Comutator limbă
+    // Language switching logic
     const langBtns = document.querySelectorAll('.lang-btn');
     const langSections = document.querySelectorAll('.lang-section');
-    const menus = [document.getElementById('menu-ro'), document.getElementById('menu-en'), document.getElementById('menu-de')];
+    const menus = [
+      document.getElementById('menu-ro'),
+      document.getElementById('menu-en'),
+      document.getElementById('menu-de')
+    ];
+    const heros = [
+      document.getElementById('hero-ro'),
+      document.getElementById('hero-en'),
+      document.getElementById('hero-de')
+    ];
+    const heroTexts = [
+      document.getElementById('herotext-ro'),
+      document.getElementById('herotext-en'),
+      document.getElementById('herotext-de')
+    ];
+    const footers = [
+      document.getElementById('footer-ro'),
+      document.getElementById('footer-en'),
+      document.getElementById('footer-de')
+    ];
     function setLang(lang) {
-      const langs = ['ro','en','de'];
-      menus.forEach((el, idx) => el.classList.toggle('hidden', lang !== langs[idx]));
+      menus.forEach((el, idx) => el.classList.toggle('hidden', lang !== ['ro','en','de'][idx]));
+      heros.forEach((el, idx) => el.classList.toggle('hidden', lang !== ['ro','en','de'][idx]));
+      heroTexts.forEach((el, idx) => el.classList.toggle('hidden', lang !== ['ro','en','de'][idx]));
       langSections.forEach(section => section.classList.toggle('hidden', !section.classList.contains('lang-'+lang)));
+      footers.forEach((el, idx) => el.classList.toggle('hidden', lang !== ['ro','en','de'][idx]));
       langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
-      localStorage.setItem('lang', lang);
     }
-    langBtns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
-    window.onload = () => { setLang(localStorage.getItem('lang') || 'ro'); };
+    langBtns.forEach(btn => btn.addEventListener('click', () => {
+      setLang(btn.dataset.lang);
+      localStorage.setItem('lang', btn.dataset.lang);
+    }));
+    window.onload = function() {
+      const savedLang = localStorage.getItem('lang');
+      if(savedLang && ['ro','en','de'].includes(savedLang)) {
+        setLang(savedLang);
+      } else {
+        const browserLang = navigator.language.slice(0,2);
+        setLang(['ro','en','de'].includes(browserLang) ? browserLang : 'ro');
+      }
+    }
   </script>
 </body>
 </html>
