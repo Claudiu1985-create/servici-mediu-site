@@ -1,26 +1,214 @@
-<ul id="menu-ro">
-  <li><a href="#despre">Despre</a></li>
-  <li><a href="#servicii">Servicii</a></li>
-  <li><a href="galerie_Version4.html">Galerie lucrări</a></li>
-  <li><a href="#echipa">Echipa</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="oferta.html">Cerere ofertă</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cerere de ofertă — Clean and Plant 2004 S.R.L.</title>
+  <meta name="description" content="Trimite o cerere de ofertă profesională pentru servicii de mediu, spații verzi, lucrări forestiere sau curățenie. Calculul se face ulterior, în privat.">
+  <link rel="stylesheet" href="style_Version3.css" />
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" class="logo" alt="Logo Clean and Plant 2004 S.R.L.">
+    </a>
+    <nav>
+      <!-- meniurile multilingve -->
+      <ul id="menu-ro">
+        <li><a href="index.html#despre">Despre</a></li>
+        <li><a href="index.html#servicii">Servicii</a></li>
+        <li><a href="galerie_Version4.html">Galerie lucrări</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="oferta.html" aria-current="page">Cerere ofertă</a></li>
+      </ul>
+      <ul id="menu-en" class="hidden">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="galerie_Version4.html">Works Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="oferta.html" aria-current="page">Quote request</a></li>
+      </ul>
+      <ul id="menu-de" class="hidden">
+        <li><a href="index.html#uberuns">Über Uns</a></li>
+        <li><a href="index.html#dienstleistungen">Dienstleistungen</a></li>
+        <li><a href="galerie_Version4.html">Galerie Arbeiten</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="oferta.html" aria-current="page">Angebotsanfrage</a></li>
+      </ul>
+    </nav>
+    <div class="lang-menu">
+      <button class="lang-btn active" data-lang="ro">RO</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
+  </header>
 
-<ul id="menu-en" class="hidden">
-  <li><a href="#about">About</a></li>
-  <li><a href="#services">Services</a></li>
-  <li><a href="galerie_Version4.html">Works Gallery</a></li>
-  <li><a href="#team">Team</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="oferta.html">Quote request</a></li>
-</ul>
+  <section class="section quote-section">
+    <div class="quote-card">
+      <!-- ROMÂNĂ -->
+      <div class="lang-section lang-ro">
+        <h1>Cerere de ofertă</h1>
+        <p>Completează detaliile proiectului tău. <strong>Calculul se face ulterior, în privat</strong>.</p>
+        <form name="Cerere Oferta Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" id="quote-form-ro">
+          <input type="hidden" name="form-name" value="Cerere Oferta Clean&Plant">
+          <p class="hidden"><label>Nu completați: <input name="camp_p"></label></p>
 
-<ul id="menu-de" class="hidden">
-  <li><a href="#uberuns">Über Uns</a></li>
-  <li><a href="#dienstleistungen">Dienstleistungen</a></li>
-  <li><a href="galerie_Version4.html">Galerie Arbeiten</a></li>
-  <li><a href="#team">Team</a></li>
-  <li><a href="#kontakt">Kontakt</a></li>
-  <li><a href="oferta.html">Angebotsanfrage</a></li>
-</ul>
+          <label>Tip proiect
+            <select name="Tip proiect" required>
+              <option disabled selected>Alege...</option>
+              <option>Plantare / Reîmpădurire</option>
+              <option>Întreținere spații verzi</option>
+              <option>Lucrări forestiere</option>
+              <option>Curățenie generală</option>
+              <option>Defrișare teren</option>
+              <option>Consultanță ecologică</option>
+              <option>Alt tip</option>
+            </select>
+          </label>
+
+          <label>Descriere proiect
+            <textarea name="Descriere proiect" required></textarea>
+          </label>
+
+          <label>Localitate
+            <input type="text" name="Localitate" required>
+          </label>
+
+          <label>Nume și prenume
+            <input type="text" name="Nume" required>
+          </label>
+
+          <label>Telefon
+            <input type="tel" name="Telefon" required>
+          </label>
+
+          <label>Email
+            <input type="email" name="Email" required>
+          </label>
+
+          <label><input type="checkbox" name="GDPR" required> Sunt de acord cu prelucrarea datelor</label>
+
+          <button type="submit" class="btn-primary">Trimite cererea</button>
+          <p id="status-ro"></p>
+        </form>
+      </div>
+
+      <!-- ENGLISH -->
+      <div class="lang-section lang-en hidden">
+        <h1>Quote request</h1>
+        <p>Fill in your project details. <strong>The calculation will be sent privately afterwards</strong>.</p>
+        <form name="Quote Request Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="honeypot" id="quote-form-en">
+          <input type="hidden" name="form-name" value="Quote Request Clean&Plant">
+          <p class="hidden"><label>Do not fill: <input name="honeypot"></label></p>
+
+          <label>Project type
+            <select name="Project type" required>
+              <option disabled selected>Select...</option>
+              <option>Tree planting</option>
+              <option>Green space maintenance</option>
+              <option>Forestry work</option>
+              <option>General cleaning</option>
+              <option>Land clearing</option>
+              <option>Ecological consulting</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>Project description
+            <textarea name="Project description" required></textarea>
+          </label>
+
+          <label>City
+            <input type="text" name="City" required>
+          </label>
+
+          <label>Name
+            <input type="text" name="Name" required>
+          </label>
+
+          <label>Phone
+            <input type="tel" name="Phone" required>
+          </label>
+
+          <label>Email
+            <input type="email" name="Email" required>
+          </label>
+
+          <label><input type="checkbox" name="GDPR" required> I agree to data processing</label>
+
+          <button type="submit" class="btn-primary">Send request</button>
+          <p id="status-en"></p>
+        </form>
+      </div>
+
+      <!-- DEUTSCH -->
+      <div class="lang-section lang-de hidden">
+        <h1>Angebotsanfrage</h1>
+        <p>Füllen Sie die Projektdetails aus. <strong>Die Kalkulation senden wir Ihnen privat</strong>.</p>
+        <form name="Angebotsanfrage Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="falle" id="quote-form-de">
+          <input type="hidden" name="form-name" value="Angebotsanfrage Clean&Plant">
+          <p class="hidden"><label>Bitte nicht ausfüllen: <input name="falle"></label></p>
+
+          <label>Projekttyp
+            <select name="Projekttyp" required>
+              <option disabled selected>Auswählen...</option>
+              <option>Baumpflanzung</option>
+              <option>Pflege von Grünflächen</option>
+              <option>Forstarbeiten</option>
+              <option>Allgemeine Reinigung</option>
+              <option>Geländerodung</option>
+              <option>Ökologische Beratung</option>
+              <option>Sonstiges</option>
+            </select>
+          </label>
+
+          <label>Projektbeschreibung
+            <textarea name="Projektbeschreibung" required></textarea>
+          </label>
+
+          <label>Ort
+            <input type="text" name="Ort" required>
+          </label>
+
+          <label>Name
+            <input type="text" name="Name" required>
+          </label>
+
+          <label>Telefon
+            <input type="tel" name="Telefon" required>
+          </label>
+
+          <label>E-Mail
+            <input type="email" name="Email" required>
+          </label>
+
+          <label><input type="checkbox" name="GDPR" required> Ich stimme der Datenverarbeitung zu</label>
+
+          <button type="submit" class="btn-primary">Anfrage senden</button>
+          <p id="status-de"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>&copy; 2024 Clean and Plant 2004 S.R.L. | Toate drepturile rezervate</span>
+  </footer>
+
+  <script>
+    // Comutator limbă
+    const langBtns = document.querySelectorAll('.lang-btn');
+    const langSections = document.querySelectorAll('.lang-section');
+    const menus = [document.getElementById('menu-ro'), document.getElementById('menu-en'), document.getElementById('menu-de')];
+    function setLang(lang) {
+      const langs = ['ro','en','de'];
+      menus.forEach((el, idx) => el.classList.toggle('hidden', lang !== langs[idx]));
+      langSections.forEach(section => section.classList.toggle('hidden', !section.classList.contains('lang-'+lang)));
+      langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+      localStorage.setItem('lang', lang);
+    }
+    langBtns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+    window.onload = () => { setLang(localStorage.getItem('lang') || 'ro'); };
+  </script>
+</body>
+</html>
