@@ -91,9 +91,214 @@
       <a href="mailto:cleanplant2004@gmail.com" class="contact-item" target="_blank">📧 cleanplant2004@gmail.com</a>
       <a href="https://wa.me/491724867610" class="contact-item" target="_blank">💬 WhatsApp Chat Direct</a>
     </div>
-    <form name="Contact Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" action="/multumim.html" class="contact-form">
+    <!-- Fără redirect: folosim JS + Netlify Forms -->
+    <form name="Contact Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" class="contact-form" id="form-ro">
       <input type="hidden" name="form-name" value="Contact Clean&Plant">
       <p class="hidden"><label>Nu completați: <input name="camp_p"></label></p>
       <div class="form-row">
         <label for="nume">Nume și prenume</label>
-        <input id="nume"
+        <input id="nume" name="Nume" type="text" placeholder="Ex: Popescu Ioan" required>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="telefon">Telefon</label>
+          <input id="telefon" name="Telefon" type="tel" placeholder="+40 ..." required>
+        </div>
+        <div>
+          <label for="email-ro">Email</label>
+          <input id="email-ro" name="Email" type="email" placeholder="exemplu@email.ro" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="mesaj">Mesaj</label>
+        <textarea id="mesaj" name="Mesaj" rows="5" placeholder="Descrie pe scurt lucrarea dorită" required></textarea>
+      </div>
+      <div class="form-row chk">
+        <label><input type="checkbox" name="GDPR" required> Sunt de acord cu prelucrarea datelor pentru a fi contactat.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Trimite cererea</button>
+      <p id="status-ro" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- EN -->
+  <section id="about" class="section lang-section lang-en hidden">
+    <h2>About us</h2>
+    <p>We are a team dedicated to environmental protection, specializing in tree planting, green space maintenance, forestry work, ecological projects and general cleaning. <strong>The general owner of the company is Dado Claudiu Andreeas</strong>.</p>
+  </section>
+  <section id="services" class="section lang-section lang-en hidden">
+    <h2>Our services</h2>
+    <ul class="services-list">
+      <li>1. Tree planting and afforestation</li>
+      <li>2. Green space maintenance and cleaning</li>
+      <li>3. Forestry work</li>
+      <li>4. Ecological consulting</li>
+      <li>5. General indoor and outdoor cleaning</li>
+      <li>6. Land clearing</li>
+      <li>7. Removal of vegetal waste</li>
+      <li>8. Professional gardening</li>
+      <li>9. Installation of irrigation systems</li>
+      <li>10. Ornamental tree maintenance</li>
+    </ul>
+  </section>
+  <section id="team-en" class="section lang-section lang-en hidden">
+    <h2>Our team</h2>
+    <p>We have a team of professionals experienced in the environmental field, ready to provide you with effective and personalized solutions for every project.</p>
+  </section>
+  <section id="contact-en" class="section contact-section lang-section lang-en hidden">
+    <h2>Request a Quote</h2>
+    <p>Please fill in the form and we’ll quickly return with a tailored offer.</p>
+    <div class="contact-info">
+      <a href="tel:+491724867610" class="contact-item" target="_blank">📞 +49 172 486 7610</a>
+      <a href="mailto:cleanplant2004@gmail.com" class="contact-item" target="_blank">📧 cleanplant2004@gmail.com</a>
+      <a href="https://wa.me/491724867610" class="contact-item" target="_blank">💬 WhatsApp Chat Direct</a>
+    </div>
+    <form name="Contact Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" class="contact-form" id="form-en">
+      <input type="hidden" name="form-name" value="Contact Clean&Plant">
+      <p class="hidden"><label>Do not fill: <input name="camp_p"></label></p>
+      <div class="form-row">
+        <label for="name-en">Name and surname</label>
+        <input id="name-en" name="Name" type="text" placeholder="Ex: John Smith" required>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="phone-en">Phone</label>
+          <input id="phone-en" name="Phone" type="tel" placeholder="+40 ..." required>
+        </div>
+        <div>
+          <label for="email-en">Email</label>
+          <input id="email-en" name="Email" type="email" placeholder="example@email.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="message-en">Message</label>
+        <textarea id="message-en" name="Message" rows="5" placeholder="Briefly describe the desired work" required></textarea>
+      </div>
+      <div class="form-row chk">
+        <label><input type="checkbox" name="GDPR" required> I agree to the processing of my data to be contacted.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Send request</button>
+      <p id="status-en" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- DE -->
+  <section id="uberuns" class="section lang-section lang-de hidden">
+    <h2>Über Uns</h2>
+    <p>Wir sind ein engagiertes Team für Umweltschutz, spezialisiert auf Baumpflanzungen, Pflege von Grünflächen, Forstarbeiten, ökologische Projekte und allgemeine Reinigungsdienste. <strong>Allgemeiner Eigentümer des Unternehmens ist Dado Claudiu Andreeas</strong>.</p>
+  </section>
+  <section id="dienstleistungen" class="section lang-section lang-de hidden">
+    <h2>Unsere Dienstleistungen</h2>
+    <ul class="services-list">
+      <li>1. Baumpflanzung und Aufforstung</li>
+      <li>2. Pflege und Reinigung von Grünflächen</li>
+      <li>3. Forstarbeiten</li>
+      <li>4. Ökologische Beratung</li>
+      <li>5. Allgemeine Innen- und Außenreinigung</li>
+      <li>6. Geländerodung</li>
+      <li>7. Entfernung von Pflanzenabfällen</li>
+      <li>8. Professionelle Gartenarbeit</li>
+      <li>9. Installation von Bewässerungssystemen</li>
+      <li>10. Pflege von Zierbäumen</li>
+    </ul>
+  </section>
+  <section id="team-de" class="section lang-section lang-de hidden">
+    <h2>Unser Team</h2>
+    <p>Wir verfügen über ein erfahrenes Team von Fachleuten im Umweltbereich, das Ihnen effektive und individuelle Lösungen für jedes Projekt bietet.</p>
+  </section>
+  <section id="contact-de" class="section contact-section lang-section lang-de hidden">
+    <h2>Angebotsanfrage</h2>
+    <p>Füllen Sie das Formular aus – wir melden uns mit einem passenden Angebot.</p>
+    <div class="contact-info">
+      <a href="tel:+491724867610" class="contact-item" target="_blank">📞 +49 172 486 7610</a>
+      <a href="mailto:cleanplant2004@gmail.com" class="contact-item" target="_blank">📧 cleanplant2004@gmail.com</a>
+      <a href="https://wa.me/491724867610" class="contact-item" target="_blank">💬 WhatsApp Chat Direkt</a>
+    </div>
+    <form name="Contact Clean&Plant" method="POST" data-netlify="true" netlify-honeypot="camp_p" class="contact-form" id="form-de">
+      <input type="hidden" name="form-name" value="Contact Clean&Plant">
+      <p class="hidden"><label>Bitte nicht ausfüllen: <input name="camp_p"></label></p>
+      <div class="form-row">
+        <label for="name-de">Name und Nachname</label>
+        <input id="name-de" name="Name" type="text" placeholder="z.B. Max Mustermann" required>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="telefon-de">Telefon</label>
+          <input id="telefon-de" name="Telefon" type="tel" placeholder="+40 ..." required>
+        </div>
+        <div>
+          <label for="email-de">E-Mail</label>
+          <input id="email-de" name="Email" type="email" placeholder="beispiel@email.de" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="nachricht-de">Nachricht</label>
+        <textarea id="nachricht-de" name="Nachricht" rows="5" placeholder="Beschreiben Sie kurz die gewünschte Arbeit" required></textarea>
+      </div>
+      <div class="form-row chk">
+        <label><input type="checkbox" name="GDPR" required> Ich bin mit der Verarbeitung meiner Daten zwecks Kontaktaufnahme einverstanden.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Anfrage senden</button>
+      <p id="status-de" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <span id="footer-ro">&copy; 2024 Clean and Plant 2004 S.R.L. | Toate drepturile rezervate</span>
+    <span id="footer-en" class="hidden">&copy; 2024 Clean and Plant 2004 S.R.L. | All rights reserved</span>
+    <span id="footer-de" class="hidden">&copy; 2024 Clean and Plant 2004 S.R.L. | Alle Rechte vorbehalten</span>
+  </footer>
+
+  <script>
+    // ===== Schimbare limbă =====
+    const langBtns = document.querySelectorAll('.lang-btn');
+    const langSections = document.querySelectorAll('.lang-section');
+    const menus = [document.getElementById('menu-ro'), document.getElementById('menu-en'), document.getElementById('menu-de')];
+    const heros = [document.getElementById('hero-ro'), document.getElementById('hero-en'), document.getElementById('hero-de')];
+    const heroTexts = [document.getElementById('herotext-ro'), document.getElementById('herotext-en'), document.getElementById('herotext-de')];
+    const footers = [document.getElementById('footer-ro'), document.getElementById('footer-en'), document.getElementById('footer-de')];
+    function setLang(lang) {
+      const langs = ['ro','en','de'];
+      menus.forEach((el, idx) => el.classList.toggle('hidden', lang !== langs[idx]));
+      heros.forEach((el, idx) => el.classList.toggle('hidden', lang !== langs[idx]));
+      heroTexts.forEach((el, idx) => el.classList.toggle('hidden', lang !== langs[idx]));
+      langSections.forEach(section => section.classList.toggle('hidden', !section.classList.contains('lang-'+lang)));
+      footers.forEach((el, idx) => el.classList.toggle('hidden', lang !== langs[idx]));
+      langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+    }
+    langBtns.forEach(btn => btn.addEventListener('click', () => { setLang(btn.dataset.lang); localStorage.setItem('lang', btn.dataset.lang); }));
+    window.onload = function() {
+      const savedLang = localStorage.getItem('lang');
+      setLang(savedLang && ['ro','en','de'].includes(savedLang) ? savedLang : ((navigator.language || 'ro').slice(0,2) || 'ro'));
+    };
+
+    // ===== Form submit fără redirect (Netlify AJAX) =====
+    function handleForm(formId, statusId) {
+      const form = document.getElementById(formId);
+      const status = document.getElementById(statusId);
+      if (!form) return;
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = 'Se trimite...';
+        const data = new FormData(form);
+        // Netlify Forms cere să includă "form-name" și honeypot dacă există
+        data.append('form-name', form.querySelector('input[name="form-name"]').value);
+        try {
+          await fetch('/', { // POST către rădăcină; Netlify captează
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams([...data]).toString()
+          });
+          status.textContent = 'Mulțumim! Cererea a fost trimisă cu succes.';
+          form.reset();
+        } catch (err) {
+          status.textContent = 'A apărut o eroare. Încercați din nou sau contactați-ne telefonic.';
+        }
+      });
+    }
+    handleForm('form-ro', 'status-ro');
+    handleForm('form-en', 'status-en');
+    handleForm('form-de', 'status-de');
+  </script>
+</body>
+</html>
