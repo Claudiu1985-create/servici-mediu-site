@@ -1,110 +1,85 @@
-<!-- Contact (UN SINGUR #contact cu 3 limbi înăuntru) -->
-<section id="contact" class="section contact-section">
-  <!-- RO -->
-  <div class="lang-section lang-ro">
-    <h2>Cerere de Ofertă</h2>
-    <div class="contact-info">
-      <a href="tel:+491724867610" class="contact-item">📞 +49 172 486 7610</a>
-      <a href="mailto:cleanplant2004@gmail.com" class="contact-item">📧 cleanplant2004@gmail.com</a>
-      <a href="https://wa.me/491724867610" class="contact-item">💬 WhatsApp Chat Direct</a>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicii de mediu – Clean and Plant 2004 S.R.L.</title>
+  <meta name="description" content="Clean and Plant 2004 S.R.L. – Servicii profesionale de mediu, silvicultură, curățenie, grădinărit și consultanță ecologică. Proprietar general: Dado Claudiu Andreeas." />
+  <link rel="stylesheet" href="style_Version3.css" />
+  <style>
+    .lang-menu { display:flex; gap:12px; position:absolute; right:24px; top:14px; z-index:10; }
+    .lang-btn { color:#fff; font-weight:bold; background:rgba(0,0,0,0.25); padding:5px 13px; border-radius:5px; border:none; cursor:pointer; transition:background .2s; }
+    .lang-btn.active, .lang-btn:hover { background:#0072c6; }
+    .hidden { display:none !important; }
+    ul.services-list { columns:2; }
+    @media (max-width:700px){ ul.services-list { columns:1; } }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html" class="brand" aria-label="Acasă">
+      <img src="images/logo.png" class="logo" alt="Logo Clean and Plant 2004 S.R.L.">
+    </a>
+    <nav>
+      <!-- RO menu -->
+      <ul id="menu-ro">
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="galerie_Version4.html">Galerie lucrări</a></li>
+        <li><a href="#echipa">Echipa</a></li>
+        <li><a href="#contact">Contact / Cerere ofertă</a></li>
+      </ul>
+      <!-- EN menu -->
+      <ul id="menu-en" class="hidden">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="galerie_Version4.html">Works Gallery</a></li>
+        <li><a href="#team-en">Team</a></li>
+        <li><a href="#contact">Contact / Quote Request</a></li>
+      </ul>
+      <!-- DE menu -->
+      <ul id="menu-de" class="hidden">
+        <li><a href="#uberuns">Über Uns</a></li>
+        <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+        <li><a href="galerie_Version4.html">Galerie Arbeiten</a></li>
+        <li><a href="#team-de">Team</a></li>
+        <li><a href="#contact">Kontakt / Angebotsanfrage</a></li>
+      </ul>
+    </nav>
+    <div class="lang-menu">
+      <button class="lang-btn active" data-lang="ro">RO</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
     </div>
-    <form name="Contact Clean&Plant RO" method="POST" data-netlify="true" netlify-honeypot="camp_p" action="/" class="contact-form">
-      <input type="hidden" name="form-name" value="Contact Clean&Plant RO">
-      <p class="hidden"><label>Nu completați: <input name="camp_p"></label></p>
-      <div class="form-row">
-        <label for="nume">Nume și prenume</label>
-        <input id="nume" name="Nume" type="text" placeholder="Ex: Popescu Ioan" required>
-      </div>
-      <div class="form-row two">
-        <div>
-          <label for="telefon">Telefon</label>
-          <input id="telefon" name="Telefon" type="tel" placeholder="+40 ..." required>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="Email" type="email" placeholder="exemplu@email.ro" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <label for="mesaj">Mesaj</label>
-        <textarea id="mesaj" name="Mesaj" rows="5" placeholder="Descrie pe scurt lucrarea dorită" required></textarea>
-      </div>
-      <div class="form-row chk">
-        <label><input type="checkbox" name="GDPR" required> Sunt de acord cu prelucrarea datelor.</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Trimite cererea</button>
-    </form>
-  </div>
+  </header>
 
-  <!-- EN -->
-  <div class="lang-section lang-en hidden">
-    <h2>Request a Quote</h2>
-    <div class="contact-info">
-      <a href="tel:+491724867610" class="contact-item">📞 +49 172 486 7610</a>
-      <a href="mailto:cleanplant2004@gmail.com" class="contact-item">📧 cleanplant2004@gmail.com</a>
-      <a href="https://wa.me/491724867610" class="contact-item">💬 WhatsApp Direct Chat</a>
+  <section class="hero">
+    <div class="overlay">
+      <h1 id="hero-ro">Clean and Plant 2004 S.R.L</h1>
+      <h1 id="hero-en" class="hidden">Clean and Plant 2004 S.R.L</h1>
+      <h1 id="hero-de" class="hidden">Clean and Plant 2004 S.R.L</h1>
+      <p id="herotext-ro">Împreună pentru un mediu mai curat și sănătos</p>
+      <p id="herotext-en" class="hidden">Together for a cleaner and healthier environment</p>
+      <p id="herotext-de" class="hidden">Gemeinsam für eine sauberere und gesündere Umwelt</p>
     </div>
-    <form name="Contact Clean&Plant EN" method="POST" data-netlify="true" netlify-honeypot="trap" action="/" class="contact-form">
-      <input type="hidden" name="form-name" value="Contact Clean&Plant EN">
-      <p class="hidden"><label>Do not fill: <input name="trap"></label></p>
-      <div class="form-row">
-        <label for="name-en">Name and surname</label>
-        <input id="name-en" name="Name" type="text" placeholder="e.g. John Smith" required>
-      </div>
-      <div class="form-row two">
-        <div>
-          <label for="phone-en">Phone</label>
-          <input id="phone-en" name="Phone" type="tel" placeholder="+49 ..." required>
-        </div>
-        <div>
-          <label for="email-en">Email</label>
-          <input id="email-en" name="Email" type="email" placeholder="example@email.com" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <label for="message-en">Message</label>
-        <textarea id="message-en" name="Message" rows="5" placeholder="Briefly describe the desired work" required></textarea>
-      </div>
-      <div class="form-row chk">
-        <label><input type="checkbox" name="GDPR" required> I agree to the processing of my data to be contacted.</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Send request</button>
-    </form>
-  </div>
+  </section>
 
-  <!-- DE -->
-  <div class="lang-section lang-de hidden">
-    <h2>Angebotsanfrage</h2>
-    <div class="contact-info">
-      <a href="tel:+491724867610" class="contact-item">📞 +49 172 486 7610</a>
-      <a href="mailto:cleanplant2004@gmail.com" class="contact-item">📧 cleanplant2004@gmail.com</a>
-      <a href="https://wa.me/491724867610" class="contact-item">💬 WhatsApp Chat Direkt</a>
-    </div>
-    <form name="Contact Clean&Plant DE" method="POST" data-netlify="true" netlify-honeypot="falle" action="/" class="contact-form">
-      <input type="hidden" name="form-name" value="Contact Clean&Plant DE">
-      <p class="hidden"><label>Bitte nicht ausfüllen: <input name="falle"></label></p>
-      <div class="form-row">
-        <label for="name-de">Name und Nachname</label>
-        <input id="name-de" name="Name" type="text" placeholder="z. B. Max Mustermann" required>
-      </div>
-      <div class="form-row two">
-        <div>
-          <label for="telefon-de">Telefon</label>
-          <input id="telefon-de" name="Telefon" type="tel" placeholder="+49 ..." required>
-        </div>
-        <div>
-          <label for="email-de">E-Mail</label>
-          <input id="email-de" name="Email" type="email" placeholder="beispiel@email.de" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <label for="nachricht-de">Nachricht</label>
-        <textarea id="nachricht-de" name="Nachricht" rows="5" placeholder="Beschreiben Sie kurz die gewünschte Arbeit" required></textarea>
-      </div>
-      <div class="form-row chk">
-        <label><input type="checkbox" name="GDPR" required> Ich stimme der Verarbeitung meiner Daten zwecks Kontaktaufnahme zu.</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Anfrage senden</button>
-    </form>
-  </div>
-</section>
+  <!-- RO: Despre -->
+  <section id="despre" class="section lang-section lang-ro">
+    <h2>Despre noi</h2>
+    <p>
+      Clean and Plant 2004 S.R.L., condusă de <strong>Dado Claudiu Andreeas</strong> – proprietar general,
+      este o companie dedicată protecției mediului și calității vieții. Activăm în silvicultură,
+      curățenie, grădinărit și consultanță ecologică, pentru clienți privați, companii și instituții publice.
+    </p>
+  </section>
+  <!-- EN: About -->
+  <section id="about" class="section lang-section lang-en hidden">
+    <h2>About us</h2>
+    <p>
+      Clean and Plant 2004 S.R.L., led by <strong>Dado Claudiu Andreeas</strong> – general owner,
+      is dedicated to environmental protection and quality of life. We operate in forestry,
+      cleaning, gardening and ecological consultancy for private clients, companies and public institutions.
+    </p>
+  </section>
+  <!-- DE
